@@ -1,1 +1,1 @@
-text('Hello World!',10,10);
+document.write('Hello World!',10,10);
