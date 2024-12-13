@@ -1,2 +1,2 @@
 let userName = prompt("Please enter your name:");
-console.log("Hello, " + userName + "!");
+const username = sessionStorage.getItem(userName);
