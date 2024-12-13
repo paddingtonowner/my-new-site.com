@@ -1,2 +1,2 @@
 let userName = prompt("Please enter your name:");
-console.log("Hello, " + userName + "!");
+document.write("Hello, " + userName + "!");
