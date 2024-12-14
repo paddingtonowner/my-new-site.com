@@ -2,8 +2,7 @@ let userName = prompt("Please enter your name:");
 const password = localStorage.getItem(userName);
 if(password === null) {
   let p_word = prompt("Password:");
-  const expires = new Date(Date.now() + 60 * 60 * 10000); //365 * 24 * 60 * 60 * 1000 set the expiration date for the account to 1 year
-  document.cookie = userName + "=" + p_word + "; expires=" + expires.toUTCString() + "; path=/";
+  localStorage.setItem(userName,p_word);
 } else {
   let p_word = prompt("Password: ");
   if(p_word === password) {
