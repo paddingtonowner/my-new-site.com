@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html> 
   <head>
-    <title>My New Site</title>
-    <link rel='stylesheet' href='style.css' type='text/css'>
+    <title>Processing.JS inside Webpages: Template</title> 
   </head>
   <body>
-    <h1><strong>This is my first webpage</strong></h1>
-    <p>I know it isn't a lot, but I will improve it.</p>
-    <p>To take a look at some fun colors and styles, go <a href='funstyles.html'>here</a>.</p>
-    <script src="./file.js"></script>
+	<!--This draws the canvas on the webpage -->
+    <canvas id="mycanvas"></canvas> 
   </body>
+ 
+<!-----<script src="./file.js"></script>>
+  <script>
+  var programCode = function(processingInstance) {
+    with (processingInstance) {
+      size(400, 400); 
+      frameRate(30);
+        
+      // Paste code from Khan Academy here:
+      fill(255, 255, 0);
+      ellipse(200, 200, 200, 200);
+      noFill();
+      stroke(0, 0, 0);
+      strokeWeight(2);
+      arc(200, 200, 150, 100, 0, PI);
+      fill(0, 0, 0);
+      ellipse(250, 200, 10, 10);
+      ellipse(153, 200, 10, 10);
+    }};
+
+  // Get the canvas that ProcessingJS will use
+  var canvas = document.getElementById("mycanvas"); 
+  // Pass the function to ProcessingJS constructor
+  var processingInstance = new Processing(canvas, programCode); 
+  </script>
 </html>
